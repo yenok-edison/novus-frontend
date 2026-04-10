@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("services-container");
 
-  fetch(`${window.APP_CONFIG.API_BASE_URL}/api/services/`)
+  fetch(`${window.APP_CONFIG.API_BASE_URL}/services/`)
     .then(res => res.json())
     .then(data => {
       container.innerHTML = "";

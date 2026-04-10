@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showToast("Sending enquiry...", "success");
 
       try {
-        const response = await fetch(`${window.APP_CONFIG.API_BASE_URL}/api/contact/submit-enquiry/`, {
+        const response = await fetch(`${window.APP_CONFIG.API_BASE_URL}/contact/submit-enquiry/`, {
           method: "POST",
           body: new FormData(form),
           headers: {

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(`${window.APP_CONFIG.API_BASE_URL}/api/members/`)
+  fetch(`${window.APP_CONFIG.API_BASE_URL}/members/`)
     .then(res => {
       if (!res.ok) throw new Error("Failed to load team");
       return res.json();

@@ -8,25 +8,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       data.forEach(service => {
         container.innerHTML += `
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
+
+          <div class="col-lg-6 mb-4">
+            <div class="card event-card h-100">
 
               <div class="card-img">
-                <img
-                  src="${window.APP_CONFIG.API_BASE_URL}${service.image}"
-                  alt="${service.title}"
-                />
+                <img src="${window.APP_CONFIG.API_BASE_URL}${service.image}" alt="${service.title}">
               </div>
 
-              <div class="card-body">
+              <div class="card-body text-center">
                 <h5 class="card-title">
                   <a href="service-details.html?id=${service.id}">
                     ${service.title}
                   </a>
                 </h5>
 
-                <p class="fst-italic text-center">
-                  ${service.date}
+                <p class="fst-italic mb-2">
+                  ${service.date || ''}
                 </p>
 
                 <p class="card-text">
@@ -36,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             </div>
           </div>
+          
         `;
       });
     })

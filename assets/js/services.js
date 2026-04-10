@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       container.innerHTML = "";
 
+      // <img src="${window.APP_CONFIG.API_BASE_URL}${service.image}" alt="${service.title}">
       data.forEach(service => {
         container.innerHTML += `
 
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="card event-card h-100">
 
               <div class="card-img">
-                <img src="${window.APP_CONFIG.API_BASE_URL}${service.image}" alt="${service.title}">
+                <img src="${service.image}" alt="${service.title}">
               </div>
 
               <div class="card-body text-center">

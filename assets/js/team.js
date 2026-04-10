@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
       members.forEach((member, index) => {
         const isReverse = index % 2 !== 0 ? "reverse" : "";
 
+        // src="${window.APP_CONFIG.API_BASE_URL}${member.image}"
         const teamHTML = `
           <div class="team-row ${isReverse}" data-aos="fade-up">
             <div class="team-img">
               <img
-                src="${window.APP_CONFIG.API_BASE_URL}${member.image}"
+                src="${member.image}"
                 alt="${member.name}"
                 loading="lazy"
               >

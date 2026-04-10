@@ -1,0 +1,2 @@
+/api/*  http://13.201.85.124:8000/api/:splat  200
+/media/*  http://13.201.85.124:8000/media/:splat  200

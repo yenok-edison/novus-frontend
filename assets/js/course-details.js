@@ -7,7 +7,7 @@ if (!courseId) {
   throw new Error("No course ID");
 }
 
-fetch(`${window.APP_CONFIG.API_BASE_URL}/api/course/${courseId}/`)
+fetch(`${window.APP_CONFIG.API_BASE_URL}/course/${courseId}/`)
   .then(res => {
     if (!res.ok) throw new Error("Course not found");
     return res.json();
@@ -22,8 +22,8 @@ fetch(`${window.APP_CONFIG.API_BASE_URL}/api/course/${courseId}/`)
 
     document.getElementById("enquirySubject").value = course.title
 
-    document.getElementById("course-image").src =
-    `${window.APP_CONFIG.API_BASE_URL}${course.image}`;
+    document.getElementById("course-image").src = course.image
+    // `{course.image}`;
 
 
     const pointsList = document.getElementById("course-points");

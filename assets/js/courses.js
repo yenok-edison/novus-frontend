@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(`${window.APP_CONFIG.API_BASE_URL}/api/courses/`)
+  fetch(`${window.APP_CONFIG.API_BASE_URL}/courses/`)
     .then(res => {
       if (!res.ok) throw new Error("API error");
       return res.json();
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const filter = document.getElementById("course-filter");
 
       // Render courses
+      // <img src="${window.APP_CONFIG.API_BASE_URL}${course.image}" class="img-fluid w-100" alt="${course.title}">
       const renderCourses = (list) => {
         container.innerHTML = "";
         list.forEach(course => {
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-lg-4 col-md-6">
               <div class="course-item h-100 d-flex flex-column shadow-sm rounded-4 overflow-hidden">
 
-                <img src="${window.APP_CONFIG.API_BASE_URL}${course.image}" class="img-fluid w-100" alt="${course.title}">
+                <img src="${course.image}" class="img-fluid w-100" alt="${course.title}">
 
                 <div class="course-content p-4 d-flex flex-column flex-grow-1">
 
